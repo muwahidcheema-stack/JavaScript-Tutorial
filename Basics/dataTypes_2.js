@@ -28,3 +28,28 @@ console.log(typeof num)
 console.log(typeof heros)
 console.log(typeof myObj)
 console.log(typeof myFun)
+
+
+// *****************  Memory Allocation ***********************
+// Stack(primitive), Heap(Non-primitive)
+
+// Stack passes the copy but heap gives reference to original value
+
+
+let name = "Muwahid Cheema"
+let name2 = name
+name2 = "abdullah cheema"
+console.log(name);
+console.log(name2);
+
+
+
+let user1 = {
+    email:"hello@gmail.com",
+    name: "hello"
+}
+let user2 = user1;
+
+user2.email = "hi@gmail.com"
+console.log(user1.email);
+console.log(user2.email);
