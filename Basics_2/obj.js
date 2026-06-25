@@ -74,10 +74,21 @@ const users=[
 // console.log(users[1].email)
 
 // console.log(user1);
-console.log(Object.keys(user1));
-console.log(Object.entries(user1));
+// returns all the keys
+// console.log(Object.keys(user1));
+// returns all the values stored
+// console.log(Object.entries(user1));
 
-console.log(user1.hasOwnProperty('name'));
+// tells does user have this specific property
+// console.log(user1.hasOwnProperty('name'));
 
 
+// Object Deconstruction => helps in reducing the use of dot operator over and over again
+const course ={
+    name: "js-course",
+    price: 999,
+    inst: "fareed"
+}
 
+const {inst} = course
+console.log(inst);
