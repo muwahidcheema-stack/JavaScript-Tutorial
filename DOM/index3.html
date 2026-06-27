@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Learning</title>
+</head>
+<body style="color: white; background-color: black;">
+    <ul class="lang">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    // Adding any element using JavaScript
+    function addLang(name) {
+        let li = document.createElement('li')
+        li.innerHTML =`${name}`
+        let ul = document.querySelector('.lang');
+        ul.appendChild(li)
+    }
+    // addLang("Python")
+    // addLang("Cpp")
+
+    // Adding any element using JavaScript in an optimized way
+    function addOptiLang(name) {
+        let li = document.createElement('li')
+        li.appendChild(document.createTextNode(name))
+        document.querySelector('.lang').appendChild(li)
+    }
+    addOptiLang("Py")
+    addOptiLang("Ruby")
+
+
+    // Edit already Declared Values
+    let temp = document.querySelector("li:nth-child(2)")
+    let newli = document.createElement('li')
+    newli.textContent = "Mojo"
+    temp.replaceWith(newli)
+
+    let temp1 = document.querySelector("li:nth-child(1)")
+    let newli1 = document.createElement('li')
+    newli1.textContent = "TypeScript"
+    temp1.replaceWith(newli1)
+
+    // Removal of Already created element 
+    const temp2 = document.querySelector("li:last-child")
+    temp2.remove()
+</script>
+</html>

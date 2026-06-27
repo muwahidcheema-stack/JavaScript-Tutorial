@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Learning</title>
+</head>
+<body style="color: white; background-color: black;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    let par = document.querySelector('.parent')
+    console.log(par);
+    console.log(par.children);
+    console.log(par.children[2].innerHTML);
+    
+    // Access the children using parent
+    for (let i = 0; i < par.children.length; i++) {
+        // const element = array[i];
+        console.log(par.children[i].innerHTML);
+        
+    }
+
+    // Can change the style of any children and can access them
+    par.children[1].style.color = "orange";
+    console.log(par.firstElementChild); 
+    
+
+    // Returns the first element of that specific parent element
+    let dayOne = document.querySelector('.day')
+    console.log(dayOne);
+    
+    // Give parent element using a child element
+    console.log(dayOne.parentElement);
+
+    // Can go to sibling via a sibling
+    console.log(dayOne.nextElementSibling);
+
+    // Gives the number of total childen of a parent
+    console.log("Nodes: ",par.childNodes);
+    
+    
+    
+</script>
+</html>
